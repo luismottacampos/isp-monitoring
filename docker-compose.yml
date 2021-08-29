@@ -3,6 +3,7 @@ services:
     image: prom/prometheus
     links:
       - ping
+      - speedtest
     ports:
       - "9090:9090"
     volumes:

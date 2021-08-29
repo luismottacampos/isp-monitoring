@@ -11,21 +11,20 @@ global:
 scrape_configs:
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
   - job_name: 'prometheus'
-
     # Override the global default and scrape targets from this job every 5 seconds.
     scrape_interval: 5s
-
     static_configs:
       - targets: ['prometheus:9090']
 
   - job_name: 'ping'
     scrape_interval: 5s
+    scrape_timeout: 4s
     static_configs:
       - targets: ['ping:9427']
 
   - job_name: 'speedtest'
     scrape_interval: 6m
-    scrape_timeout: 1m
+    scrape_timeout: 3m
     static_configs:
       - targets: ['speedtest:9798']
 

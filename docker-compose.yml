@@ -16,3 +16,9 @@ services:
       - ./ping_exporter:/config
     ports:
       - "9427:9427"
+
+  speedtest:
+    image: miguelndecarvalho/speedtest-exporter
+    ports:
+      - "9798:9798"
+

@@ -22,3 +22,10 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
       - targets: ['ping:9427']
+
+  - job_name: 'speedtest'
+    scrape_interval: 6m
+    scrape_timeout: 1m
+    static_configs:
+      - targets: ['speedtest:9798']
+

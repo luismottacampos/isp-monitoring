@@ -1,0 +1,8 @@
+services:
+  ping:
+    image: czerwonk/ping_exporter
+    command: ./ping_exporter --metrics.rttunit=s --metrics.deprecated=disable --config.path /config/config.yaml
+    volumes:
+      - ./ping_exporter:/config
+    ports:
+      - "9427:9427"

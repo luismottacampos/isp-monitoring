@@ -1,0 +1,7 @@
+targets:
+  - 8.8.8.8
+  - teksavvy.com.
+
+dns:
+  refresh: 1m
+  nameserver: ns.teksavvy.com.

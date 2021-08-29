@@ -1,4 +1,14 @@
 services:
+  prometheus:
+    image: prom/prometheus
+    links:
+      - ping
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/etc:/etc/prometheus:ro
+      - ./prometheus/data:/prometheus:rw
+
   ping:
     image: czerwonk/ping_exporter
     command: ./ping_exporter --metrics.rttunit=s --metrics.deprecated=disable --config.path /config/config.yaml

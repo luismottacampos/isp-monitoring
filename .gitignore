@@ -1,2 +1,3 @@
 .*.swp
 prometheus/data/
+grafana/data/grafana.db
